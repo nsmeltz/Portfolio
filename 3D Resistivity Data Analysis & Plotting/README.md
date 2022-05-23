@@ -2,7 +2,7 @@
 
 # Background
 This work is a part of the analysis I did for my thesis research in Yellowstone National Park. For this analysis I will walk through the step by step process that I used to determine what data I needed to filter out to produce a robust geophysical inverisons for each resistivity line shown in the image below. 
-![location](https://github.com/nsmeltz/Portfolio/blob/12554d19984b1631f0af69767d5d669b5e7e2359/3D_Plotting_Matlab/Images/GE_lines.jpg).   
+![location](https://github.com/nsmeltz/Portfolio/blob/e0854428d17b28c55d054287d20d37b9beadd2d0/3D%20Resistivity%20Data%20Analysis%20&%20Plotting/Images/GE_lines.jpg).   
    - 5 resistivity datasets were collected in parallel lines crossing over Rosette Spring
    - Each line is ~110m long 
 
