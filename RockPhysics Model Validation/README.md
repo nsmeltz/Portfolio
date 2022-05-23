@@ -18,11 +18,11 @@ This dataset shows the changes in VWC between May to August 2017 in a mountianou
 
 I gathered, cleaned, and exported the data as an Excel File
 
-![table](https://github.com/nsmeltz/Portfolio/blob/fb3a680b86c0338aa97ccda210267f84a94c31a5/Model_Validation_Matlab/Images/table.jpg)
+![table](https://github.com/nsmeltz/Portfolio/blob/7a854025f84c72054b935a09d6856a985bb23c48/RockPhysics%20Model%20Validation/Images/table.jpg)
 
 # Results 
 I plotted the Measured Delta VWC vs RockPhysics Delta VWC for each measurement date
-![plot](https://github.com/nsmeltz/Portfolio/blob/fb3a680b86c0338aa97ccda210267f84a94c31a5/Model_Validation_Matlab/Images/plot.jpg)
+![plot](https://github.com/nsmeltz/Portfolio/blob/7a854025f84c72054b935a09d6856a985bb23c48/RockPhysics%20Model%20Validation/Images/plot.jpg)
 
 The blue line is the linear regression of the data points
 The red line is the y=x line (ie NMR Delta VWC = RockPhysics Delta VWC)
