@@ -32,11 +32,9 @@ This plot shows all the data points as black dots with the FILTERED datapoints a
 ## 5. Geophysical Inversion Result from Filtered Data
 This plot shows what the geophysical inverison result looks like after I processed the filtered data.
 ![filteredResult](https://github.com/nsmeltz/Portfolio/blob/dca451f7393b933c777934e704c81ae98d16979e/3D%20Resistivity%20Data%20Analysis%20&%20Plotting/Images/filtered_geophys.png)
-
-
    - Final RMS on this inversion result was 1.0 implying that the geophysical model overfit the data set. Now there is a smoother transition between areas of high and low resistivy.
 
 ## 6. 3D Plot
 After repeating the steps 1-5 for each line of data the filtered results were plotted 3D space to see relationships between the data planes and surface features
 ![3D_Plot](https://github.com/nsmeltz/Portfolio/blob/b673fa2bb33fbfb285dd71ec9c3d548f5b0105e2/3D_Plotting_Matlab/Images/3D_plot.png)
-   - 
+   - The dark blue areas in lines 2 & 3 likely represent areas of hot water bubbling up through the rock to feed Rosette Spring 
