@@ -36,5 +36,5 @@ This plot shows what the geophysical inverison result looks like after I process
 
 ## 6. 3D Plot
 After repeating the steps 1-5 for each line of data the filtered results were plotted 3D space to see relationships between the data planes and surface features
-![3D_Plot](https://github.com/nsmeltz/Portfolio/blob/b673fa2bb33fbfb285dd71ec9c3d548f5b0105e2/3D_Plotting_Matlab/Images/3D_plot.png)
+![3D_Plot](https://github.com/nsmeltz/Portfolio/blob/29a6d1c158f8d178d73a2c563551f31486bca696/3D%20Resistivity%20Data%20Analysis%20&%20Plotting/Images/3D_plot.png)
    - The dark blue areas in lines 2 & 3 likely represent areas of hot water bubbling up through the rock to feed Rosette Spring 
