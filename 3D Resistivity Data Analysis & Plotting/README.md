@@ -12,6 +12,7 @@ This plot shows the data points as black dots with squares color coded by resist
 
 ## 2. Geophysical Inversion Result
 This plot shows what the geophysical inverison result looks like after I processed the unfiltered data. 
+![unfilteredResult](https://github.com/nsmeltz/Portfolio/blob/dca451f7393b933c777934e704c81ae98d16979e/3D%20Resistivity%20Data%20Analysis%20&%20Plotting/Images/unfiltered_geophys.png)
 
 
 
