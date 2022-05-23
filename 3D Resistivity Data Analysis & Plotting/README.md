@@ -8,13 +8,12 @@ This work is a part of the analysis I did for my thesis research in Yellowstone 
 
 ## 1. Unfiltered Data Plot
 This plot shows the data points as black dots with squares color coded by resistance value. X axis is distance along the line, y axis is elevation, and resistance value is on a log10 scale (ie 0 is 10^0, 1 is 10^1, etc).
-![pseudosection](https://github.com/nsmeltz/Portfolio/blob/bd1262b65bd193d11c5b344b5502d66c30ad8c7a/3D%20Resistivity%20Data%20Analysis%20&%20Plotting/Images/pseudosection.png)
+![pseudosection](https://github.com/nsmeltz/Portfolio/blob/2caf45f5f5f814df68e37868dd720ea45b248872/3D%20Resistivity%20Data%20Analysis%20&%20Plotting/Images/pseudosection.png)
 
 ## 2. Geophysical Inversion Result
-This plot shows what the geophysical inverison result looks like after I processed the unfiltered data.
-![Unfiltered](https://github.com/nsmeltz/Portfolio/blob/b282eb692fde23e3e84a646a8906e30168f2dfa2/3D%20Resistivity%20Data%20Analysis%20&%20Plotting/Images/unfiltered_geophys.png)
-
-
+This plot shows what the geophysical inverison result looks like after I processed the unfiltered data. 
+![unfilteredResult](https://github.com/nsmeltz/Portfolio/blob/dca451f7393b933c777934e704c81ae98d16979e/3D%20Resistivity%20Data%20Analysis%20&%20Plotting/Images/unfiltered_geophys.png)
+<img src="(https://github.com/nsmeltz/Portfolio/blob/dca451f7393b933c777934e704c81ae98d16979e/3D%20Resistivity%20Data%20Analysis%20&%20Plotting/Images/unfiltered_geophys.png)" alt="Unfiltered Result" width="200"/>
 
 
 
