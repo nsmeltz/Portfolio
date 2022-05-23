@@ -1,22 +1,6 @@
-# Group 2 Final Project: Tornado Data Analysis
+# Tornado Data Analysis
 
-Link to **Google Slides Presentation**: 
-https://docs.google.com/presentation/d/1zSgH7H8bt0tgr5ZWaSebuRSi6RUVaBKLAAeG2BsMXpk/edit?usp=sharing
-
-
-## Overview of Project
-   - **Selected topic:**
-       Tornadoes
-   - **Reason why we selected our topic:**  
-     - Tornados are fascinating and devasting at the same time. All members of our group are interested in this topic, especially given that we are currently experiencing spring severe weather season. 
-     - Group members mostly reside in Tennesse, with one member currently living in the Midwest (who recently relocated from Memphis, TN).
-     - As we began to research this topic, an **EF-3** tornado struck Andover, KS, the evening of April 29, 2022. Wind speeds reached at least 136 miles per hour with experts estimating damage to several hundred homes and businesses, including Andover's local YMCA, which sustained a direct hit. Despite the high level of destruction, only minor injuries were reported.      
-     [https://weather.com/storms/severe/news/2022-04-29-tornado-andover-kansas-nebraska-oklahoma](https://weather.com/storms/severe/news/2022-04-29-tornado-andover-kansas-nebraska-oklahoma)
-     [https://www.weather.gov/oun/efscale](https://www.weather.gov/oun/efscale)
-     - We intend to further evaluate our data and see where it takes us.
-     
-   - **Description of our Data Sources:**   
-     - **Tornado Data**
+## The Dataset
      - Our group utilized the SPC National Severe Weather Database Browser to download severe weather data including tornadoes (since 1950), as well as hail and damaging winds data (since 1955). 
        - [https://www.spc.noaa.gov/climo/online/sp3/plot.php](https://www.spc.noaa.gov/climo/online/sp3/plot.php)
        - The data is derived from the National Weather Service's Storm Data publication, which is reviewed and processed by the National Climatic Data Center and the Storm Prediction Center
@@ -42,16 +26,7 @@ https://docs.google.com/presentation/d/1zSgH7H8bt0tgr5ZWaSebuRSi6RUVaBKLAAeG2BsM
   - Filtered out bad data (ie EF ratings not 0-5)
   - Filtered for lower 48 US states (exclude PR, VI, HI, AK)
   - Loss & Crop Loss: Filtered for data after 2016
-  - Filtered for 2008-2020 (F scale/EF scale change)
-
-- **Population Data:** 
-  - Kept these columns:
-    - State FIPS
-    - County FIPS
-    - State Name
-    - County Name
-    - Population Estimate by Year 
-
+  - Filtered for 2008-2020 (F scale/EF scale change) 
 
 ## Machine Learning Models
 
@@ -90,40 +65,3 @@ The Neural Network Model testing data returned Loss: 0.9574524760246277 and Accu
 
 
 Summary: From our experience with these machine learning methods it seems that this dataset has very complicated patterns or the lack of patterns making it difficult to model. We think some of this may come from the fact that the vast majority of tornadoes in our dataset did not have any fatalities but one entry has 168 fatalites. This likely makes it very difficult to the machine learning algorithms to learn a pattern from this dataset. 
-
-
-## Database:
-  - Our SQL database is being remote hosted on **Amazon's AWS Relational Database Service (RDS)** free tier. 
-  - Our local PostgreSQL/pgAdmin database is connected to our Amazon RDS instance. 
-  - Our database include two tables: County & Tornadoes (see ERD)
-  - **Entity Relationship Diagram:**
-    - ERD created with **QuickDBD Web App**: [https://www.quickdatabasediagrams.com/](https://www.quickdatabasediagrams.com/)
-    - ![Database/QuickDBD-tornadoes_db.png](Database/QuickDBD-tornadoes_db.png)
-  - **Amazon RDS Database Link:** 
-    - [tornado-db.cwzrmrb6gdt4.us-east-1.rds.amazonaws.com](tornado-db.cwzrmrb6gdt4.us-east-1.rds.amazonaws.com)
-  - **Amazon S3 Data Set Links:** 
-    - [https://group-2-project-tornadoes.s3.amazonaws.com/2008-2020_tornadoes_EF_cleaned_db.csv](https://group-2-project-tornadoes.s3.amazonaws.com/2008-2020_tornadoes_EF_cleaned_db.csv)
-    - [https://group-2-project-tornadoes.s3.amazonaws.com/Population_cleaned_db.csv](https://group-2-project-tornadoes.s3.amazonaws.com/Population_cleaned_db.csv)
-    - [https://group-2-project-tornadoes.s3.amazonaws.com/joined_torn_pop_data_2010-2019_db.csv](https://group-2-project-tornadoes.s3.amazonaws.com/joined_torn_pop_data_2010-2019_db.csv)
-  - Via postgreSQL, we completed a left join of population data into our tornadoes data set. 
-    - We encountered a challenge with the join because the tornado population data included a year column, whereas the County (Population) data didn't include a year column but a "Pop" column (integer data for population) with the year concatenated into the column name.
-    - To account for this, I created a new table within postgreSQL by duplicating the original tornado table and adding a cnty_pop (county population) column to house the joined tornado & population data.
-    - The join statement utilized was not a traditional join statement, but an implied join statement using PostgreSQL's UPDATE join syntax to update the values in the new table's cnty_pop column with data from the County table. 
-    - [https://www.postgresqltutorial.com/postgresql-tutorial/postgresql-update-join/#:~:text=To%20join%20to%20another%20table,every%20row%20of%20table%20t2%20.](https://www.postgresqltutorial.com/postgresql-tutorial/postgresql-update-join/#:~:text=To%20join%20to%20another%20table,every%20row%20of%20table%20t2%20.)
-    - The information was joined one year at a time into the new table to ensure that the appropriate columns were being updated. 
-    - UPDATE join code example: 
-```
---Join pop data into torn_pop 2010
-UPDATE torn_pop
-SET cnty_pop = county.pop_2010
-FROM county
-WHERE county.county_id = torn_pop.county_id
-AND torn_pop.year = 2010;
-```
-  - Our **Neural Network** machine learning model was connected to our remote-hosted **Amazon RDS database** utilizing a **PySpark connection string** within **Google Colaboratory** (cloud-based notebook/Python IDE).
-
-### Tableau Story
-
-  - [Tableau Story](https://public.tableau.com/shared/4MXXXP5Q2?:display_count=n&:origin=viz_share_link)
-  - Our tableau story features multiple types of visualizations.
-  - Interactivity is included in pages 3 and 4 where the viewer can select the year of tornado data to view on the map.
