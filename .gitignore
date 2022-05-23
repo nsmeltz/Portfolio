@@ -1,9 +1,6 @@
 # Ignore 3D Plotting
 /3D_Plotting_Matlab/Processing_Workflow.pptx
 
-# Ignore CitiBike 
-/CitiBike_Tableau/data
-
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
