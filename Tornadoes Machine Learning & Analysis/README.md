@@ -62,3 +62,7 @@ The Neural Network Model testing data returned Loss: 0.9574524760246277 and Accu
 
 
 Summary: From our experience with these machine learning methods it seems that this dataset has very complicated patterns or the lack of patterns making it difficult to model. We think some of this may come from the fact that the vast majority of tornadoes in our dataset did not have any fatalities but one entry has 168 fatalites. This likely makes it very difficult to the machine learning algorithms to learn a pattern from this dataset. 
+
+### Tableau Story
+
+  - [Tableau Story](https://public.tableau.com/shared/4MXXXP5Q2?:display_count=n&:origin=viz_share_link)
