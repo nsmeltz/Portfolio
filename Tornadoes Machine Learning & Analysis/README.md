@@ -4,7 +4,7 @@
      - I utilized the SPC National Severe Weather Database Browser to download all tornado data from 1950-2020
   
 
-## Questions I hope to answer through data analysis:** 
+## Questions I hope to answer through data analysis:
    
      - Which tornado magnitude is the most common?
 
