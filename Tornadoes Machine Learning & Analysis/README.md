@@ -84,4 +84,4 @@ Summary: From my experience with these machine learning methods it seems that th
 
 ### Tableau Story
 
-  - [Tableau Story](https://public.tableau.com/views/TornadoesStory/TornadoStory?:language=en-US&publish=yes&:display_count=n&:origin=viz_share_link)
+  - Check out my[Tableau Story](https://public.tableau.com/views/TornadoesStory/TornadoStory?:language=en-US&publish=yes&:display_count=n&:origin=viz_share_link) for more data vizualizations 
