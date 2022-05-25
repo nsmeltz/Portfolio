@@ -51,7 +51,7 @@ Tornado Data Dictionary
 Goal: Determine tornado's EF score based on these metrics: number of injuries, number of fatalities, loss ($), crop loss($), length (mi), and width (yds)
 
 **Random Forest**                                                                          
-      I started with Random Forest which returned an accuracy of 0.63905. This accuracy is fairly good for the dataset I wanted to see if I could increase it by using another algorithm. I used the feature imporance plot to determine which features were most significant in predicting EF rating so I could apply it to a logistic regression and a neural network.
+      I started with Random Forest which returned an accuracy of 0.63905. This accuracy is fairly good for the dataset I wanted to see if I could increase it by using another algorithm. I used the feature imporance plot to determine which features were most significant in predicting EF rating so I could apply it to a logistic regression and a neural network.                                                                    
 ![Feature Importance](https://github.com/nsmeltz/Portfolio/blob/5c53bb0b4cabfb33e6458df80fb07ec0b295e9fe/Tornadoes%20Machine%20Learning%20&%20Analysis/Images/RF_FeatureImportance.png)
 
       From this plot I determined that the Loss, Width, and Length were the top contributers to EF rating. 
