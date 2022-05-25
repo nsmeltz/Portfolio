@@ -2,13 +2,11 @@
 
 | Column Name  	| Data Type 	| Description                 	|
 |--------------	|-----------	|-----------------------------	|
+| Timestamp    	| datetime  	| Date & Time                 	|
 | Year         	| integer   	| Year from 2008 - 2020       	|
 | Month        	| integer   	| Month of Year               	|
 | Day          	| integer   	| Day of Month                	|
-| Timestamp    	| datetime  	| Date & Time                 	|
 | State        	| string    	| State Tornado Started in    	|
-| State_Fips   	| integer   	| State Fips Number           	|
-| County_Fips 	| integer   	| County Fips Number          	|
 | Start_Lat    	| float     	| Starting Latitude           	|
 | Start_Lon    	| float     	| Starting longitude          	|
 | End_Lat      	| float     	| Ending latitude             	|
