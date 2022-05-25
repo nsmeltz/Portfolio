@@ -2,11 +2,9 @@
 
 ## The Dataset
      - I utilized the NOAA National Severe Weather Database Browser to download all tornado data from 1950-2020
-     
-     ![NOAA](https://github.com/nsmeltz/Portfolio/blob/fbf381a3d80497a336325ddfbe00080dadcfff01/Tornadoes%20Machine%20Learning%20&%20Analysis/Images/NOAA_SPC.png)
+  ![NOAA](https://github.com/nsmeltz/Portfolio/blob/fbf381a3d80497a336325ddfbe00080dadcfff01/Tornadoes%20Machine%20Learning%20&%20Analysis/Images/NOAA_SPC.png)
   
-
-## Questions I hope to answer through data analysis:
+## Questions I hope to answer through my analysis:
    
      - Which tornado magnitude is the most common?
 
@@ -24,7 +22,29 @@
   - Filtered out bad data (ie EF ratings not 0-5)
   - Filtered for lower 48 US states (exclude PR, VI, HI, AK)
   - Loss & Crop Loss: Filtered for data after 2016
-  - Filtered for 2008-2020 (F scale/EF scale change) 
+  - Filtered for 2008-2020 (F scale/EF scale change)
+
+     Tornado Data Dictionary
+
+     | Column Name  	| Data Type 	| Description                 	|
+     |--------------	|-----------	|-----------------------------	|
+     | Timestamp    	| datetime  	| Date & Time                 	|
+     | Year         	| integer   	| Year from 2008 - 2020       	|
+     | Month        	| integer   	| Month of Year               	|
+     | Day          	| integer   	| Day of Month                	|
+     | State        	| string    	| State Tornado Started in    	|
+     | Start_Lat    	| float     	| Starting Latitude           	|
+     | Start_Lon    	| float     	| Starting longitude          	|
+     | End_Lat      	| float     	| Ending latitude             	|
+     | End_Lon      	| float     	| Ending longitude            	|
+     | EF           	| integer   	| EF Scale Rating (0-5)       	|
+     | Injuries     	| intger    	| No of injuries occured      	|
+     | Fatalities   	| integer   	| No of deaths occured        	|
+     | Loss         	| float     	| Estimated Property loss ($) 	|
+     | Crop_Loss    	| float     	| Estimated Crop Loss ($)     	|
+     | Length       	| float     	| Length in miles             	|
+     | Width        	| integer   	| Width in yards              	|
+
 
 ## Machine Learning Models
 
