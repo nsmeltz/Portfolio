@@ -13,12 +13,13 @@
 
 **Employees Who are Eligible to Participate in Mentorship Program**                                                               
 ![Mentorship Program](https://github.com/nsmeltz/Module_7_Challenge/blob/63fca998e56084fa2dbcb3ba1d701a1ffc5c3839/Data/mentorship_eligibilty.png)
+ - All employees born in 1965 or after are eligible for participation in the mentorship program.
 
 **Number of Employees Eligible for the Mentorship Program per Job Title**                                                        
 ![Mentorship Numbers](https://github.com/nsmeltz/Module_7_Challenge/blob/871c641ebd0889750d5f71c05cffd849a6fb9734/Data/mentorship_titles.png)
 
   - There are a total of 1,549 employees that are eligible for participation in the mentorship program.
-  - All employees born in 1965 are eligible for participation in the mentorship program.
+  
   
 # Summary:
  - **Number of Roles to be Filled**                                                                             
