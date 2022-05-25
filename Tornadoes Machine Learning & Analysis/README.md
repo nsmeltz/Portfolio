@@ -50,8 +50,9 @@ Tornado Data Dictionary
 
 ## Machine Learning Models
 
-1. Determine tornado's EF score based on these metrics: number of injuries, number of fatalities, loss ($), crop loss($), length (mi), and width (yds)
-   - **Random Forest**                                                                          
+Goal: Determine tornado's EF score based on these metrics: number of injuries, number of fatalities, loss ($), crop loss($), length (mi), and width (yds)
+
+**Random Forest**                                                                          
       I started with Random Forest which returned an accuracy of 0.63905. This accuracy is fairly good for the dataset I wanted to see if I could increase it by using another algorithm. I used the feature imporance plot to determine which features were most significant in predicting EF rating so I could apply it to a logistic regression and a neural network.
 ![Feature Importance](https://github.com/nsmeltz/Portfolio/blob/5c53bb0b4cabfb33e6458df80fb07ec0b295e9fe/Tornadoes%20Machine%20Learning%20&%20Analysis/Images/RF_FeatureImportance.png)
 
@@ -59,7 +60,7 @@ Tornado Data Dictionary
        
    
 
-   - **Logistic Regression**                                                                     
+**Logistic Regression**                                                                     
    Visualizing relationships between EF rating, Loss, Width, and Length
    
   EF vs Loss          |  EF vs Width          | EF vs Length
@@ -67,22 +68,21 @@ Tornado Data Dictionary
 ![](https://github.com/nsmeltz/Portfolio/blob/5c53bb0b4cabfb33e6458df80fb07ec0b295e9fe/Tornadoes%20Machine%20Learning%20&%20Analysis/Images/EF_Loss.png) |  ![](https://github.com/nsmeltz/Portfolio/blob/5c53bb0b4cabfb33e6458df80fb07ec0b295e9fe/Tornadoes%20Machine%20Learning%20&%20Analysis/Images/EF_Width.png) |  ![](https://github.com/nsmeltz/Portfolio/blob/5c53bb0b4cabfb33e6458df80fb07ec0b295e9fe/Tornadoes%20Machine%20Learning%20&%20Analysis/Images/EF_Length.png)  
 
 ![](https://github.com/nsmeltz/Portfolio/blob/5c53bb0b4cabfb33e6458df80fb07ec0b295e9fe/Tornadoes%20Machine%20Learning%20&%20Analysis/Images/LogReg_accuracy.png)
-The Logistic Regression returned slightly higher testing accuracy than the Random Forest Model. 
+The Logistic Regression returned lower testing accuracy than the Random Forest Model, suggesting that it is not complex enough for this dataset.  
 Training Accuracy          |  Testing Accuracy         
 :-------------------------:|:-------------------------:
 0.4861111111111111     | 0.48520710059171596
 
-2. Determine number of fatalities based on these metrics: EF rating, number of injuries, length (mi), width(yds), and county population
-   - **Neural Network**  
-![](https://github.com/adavisfoy/group_2_project/blob/c6fb0a799a0bda436a2c5512b566d1d6e5f55538/ML/Final%20ML%20Models/Images/NN_model.png)
+**Neural Network**  
+![](https://github.com/nsmeltz/Portfolio/blob/5c53bb0b4cabfb33e6458df80fb07ec0b295e9fe/Tornadoes%20Machine%20Learning%20&%20Analysis/Images/LogReg_accuracy.png/NN_model.png)
 
-The Neural Network Model testing data returned Loss: 0.9574524760246277 and Accuracy: 0.9464285969734192. 94% accuracy is too high for real world data so I decided to look into the evolution of the accuracy as the model ran. The following graphs show the loss and accuracy through each iteration (epoch) of the model. This model quickly increases accuracy (~20epochs) and converges to ~95% testing accuracy. The testing accuracy is greater than the training accuracy suggesting that the model is underfitting the data. The loss graph also suggests underfitting because loss does not decrease with increasing epochs (ie the model was unable to learn the training dataset). Overall this model is not well fit to the complexity of this dataset.  
+The Neural Network Model testing data returned Loss: 0.9877785444259644, Accuracy: 0.39053255319595337. 39% accuracy seemed low so I decided to look into the evolution of the accuracy as the model ran. The following graphs show the loss and accuracy through each iteration (epoch) of the model. This model immediately flatlines at ~39% accuracy after epoch 0 meaning suggesting underfitting and a possibly that the Adam optimization function does not fit this dataset. The testing accuracy is greater than the training accuracy suggesting that the model is underfitting the data. However, the loss decreases with increasing epochs implying that the model did learn from the training data. Overall this model is not well fit to the complexity of this dataset and is likely too simple for how complex the data is.  
  Model Accuracy         |   Model Accuracy  
 :-------------------------:|:-------------------------:
-![](https://github.com/adavisfoy/group_2_project/blob/20402cb68e114dadb272f1f0eaa03d847215ad3f/ML/Final%20ML%20Models/Images/NN_accuracy.png) |  ![](https://github.com/adavisfoy/group_2_project/blob/20402cb68e114dadb272f1f0eaa03d847215ad3f/ML/Final%20ML%20Models/Images/NN_loss.png) | 
+![](https://github.com/nsmeltz/Portfolio/blob/5c53bb0b4cabfb33e6458df80fb07ec0b295e9fe/Tornadoes%20Machine%20Learning%20&%20Analysis/Images/NN_accuracy.png) |  ![](https://github.com/nsmeltz/Portfolio/blob/5c53bb0b4cabfb33e6458df80fb07ec0b295e9fe/Tornadoes%20Machine%20Learning%20&%20Analysis/Images/NN_loss.png) | 
 
 
-Summary: From my experience with these machine learning methods it seems that this dataset has either very complicated patterns or the lack of patterns making it difficult to model. I think some of this may come from the fact that the vast majority of tornadoes in our dataset did not have any fatalities, but one entry has 168 fatalites. This likely makes it very difficult to the machine learning algorithms to learn a pattern from this dataset. 
+Summary: From my experience with these machine learning methods it seems that this dataset has either very complicated patterns or the lack of patterns making it difficult to model. The logistic regression was able to predict the data most accurately, but I would not consider this a viable model for predicting EF rating from number of fatalities, injuries, crop loss ($), loss ($), length (miles), & width (yards).
 
 ### Tableau Story
 
