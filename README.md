@@ -9,3 +9,4 @@ I have consolidated a handful of data anlysis projects that I have done.
       - In this analysis I use linear regression to determine if the model predicted volumetric water content of the soil is the same as the measured volumetric water content in the soil.
 
 3. Tornadoes Machine Learning & Analysis (Python & Tableau)
+    - In this analysis I use 3 machine learning algorithms to predict the EF rating for a tornado dataset from 1950-2020. I also show a Tableau story analyzing aspects of the tornado dataset.
