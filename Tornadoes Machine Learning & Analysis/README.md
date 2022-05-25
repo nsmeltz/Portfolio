@@ -18,32 +18,34 @@
      
 ## Data Cleaning Process
 
-- **Tornado Data:** 
-  - Filtered out bad data (ie EF ratings not 0-5)
-  - Filtered for lower 48 US states (exclude PR, VI, HI, AK)
-  - Loss & Crop Loss: Filtered for data after 2016
-  - Filtered for 2008-2020 (F scale/EF scale change)
+Tornado Data Dictionary
+| Column Name  	| Data Type 	| Description                 	|
+|--------------	|-----------	|-----------------------------	|
+| Timestamp    	| datetime  	| Date & Time                 	|
+| Year         	| integer   	| Year from 2008 - 2020       	|
+| Month        	| integer   	| Month of Year               	|
+| Day          	| integer   	| Day of Month                	|
+| State        	| string    	| State Tornado Started in    	|
+| Start_Lat    	| float     	| Starting Latitude           	|
+| Start_Lon    	| float     	| Starting longitude          	|
+| End_Lat      	| float     	| Ending latitude             	|
+| End_Lon      	| float     	| Ending longitude            	|
+| EF           	| integer   	| EF Scale Rating (0-5)       	|
+| Injuries     	| intger    	| No of injuries occured      	|
+| Fatalities   	| integer   	| No of deaths occured        	|
+| Loss         	| float     	| Estimated Property loss ($) 	|
+| Crop_Loss    	| float     	| Estimated Crop Loss ($)     	|
+| Length       	| float     	| Length in miles             	|
+| Width        	| integer   	| Width in yards              	|
 
-     Tornado Data Dictionary
 
-     | Column Name  	| Data Type 	| Description                 	|
-     |--------------	|-----------	|-----------------------------	|
-     | Timestamp    	| datetime  	| Date & Time                 	|
-     | Year         	| integer   	| Year from 2008 - 2020       	|
-     | Month        	| integer   	| Month of Year               	|
-     | Day          	| integer   	| Day of Month                	|
-     | State        	| string    	| State Tornado Started in    	|
-     | Start_Lat    	| float     	| Starting Latitude           	|
-     | Start_Lon    	| float     	| Starting longitude          	|
-     | End_Lat      	| float     	| Ending latitude             	|
-     | End_Lon      	| float     	| Ending longitude            	|
-     | EF           	| integer   	| EF Scale Rating (0-5)       	|
-     | Injuries     	| intger    	| No of injuries occured      	|
-     | Fatalities   	| integer   	| No of deaths occured        	|
-     | Loss         	| float     	| Estimated Property loss ($) 	|
-     | Crop_Loss    	| float     	| Estimated Crop Loss ($)     	|
-     | Length       	| float     	| Length in miles             	|
-     | Width        	| integer   	| Width in yards              	|
+     - Filtered out bad data (ie EF ratings not 0-5)
+     - Filtered for lower 48 US states (exclude PR, VI, HI, AK)
+     - Loss & Crop Loss: 
+          - adjusted so all entries were in whole number dollars
+          - input NaN for entries with 0 becasue that does not mean $0 in damage, it means no data collected
+     - Filtered for 2008-2020 (in late 2007 the scale for measuring tornadoes changed from the F scale to the EF scale)
+
 
 
 ## Machine Learning Models
