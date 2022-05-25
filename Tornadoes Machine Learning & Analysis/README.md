@@ -13,8 +13,6 @@
      - In which month do the most tornadoes occur? 
 
      - Can I predict the EF rating of a tornado given the number of fatalities, injuries, crop loss ($), loss ($), length (miles), & width (yards)? 
-
-     - Can I determine if the location of "tornado alley" is changing over time? Or are there multiple "tornado alleys"? 
      
 ## Data Cleaning Process
 
