@@ -1,6 +1,6 @@
 # Retiring Employees SQL Analysis
 
-# Overview of the analysis: 
+# Summary:
  The purpose of this analysis is to determine the current number of retiring employees per title and identify current employees who are eligible to participate in a mentorship program put on by the retireing employees. 
  
 # Results:

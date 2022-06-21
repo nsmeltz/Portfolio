@@ -1,12 +1,7 @@
 # Model Prediction Analysis
 
-# Background
-This analysis aims to determine if the RockPhysics inversion algorithms can predict volumetric water content(VWC) in the soil using porosity(phi) and water saturation(Sw) parameters from the inversion result. 
-
-Relationship between parameters
-modeled VWC = phi * Sw
-
-I use directly measured VWC content to compare to the modeled VWC to see if the model accurately predicts VWC in the soil.
+# Summary
+This analysis aims to determine if the RockPhysics inversion algorithms can predict/model volumetric water content(VWC) in the soil as well as directly measureing the VWC. I use linear regression to compare Measured VWC content to the RockPhysics Modeled VWC to see if the model accurately predicts VWC in the soil.
 
 # The Dataset
 I looked at the change in VWC (delta VWC) between months to determine if the model matches the measured change. 

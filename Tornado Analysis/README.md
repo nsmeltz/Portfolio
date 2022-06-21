@@ -1,19 +1,19 @@
 # Tornado Data Analysis
 
-## The Dataset
-     - I utilized the NOAA National Severe Weather Database Browser to download all tornado data from 1950-2020
-  ![NOAA](https://github.com/nsmeltz/Portfolio/blob/fbf381a3d80497a336325ddfbe00080dadcfff01/Tornadoes%20Machine%20Learning%20&%20Analysis/Images/NOAA_SPC.png)
-  
-## Questions I hope to answer through my analysis:
-   
+## Summary:
+The purpose of this analysis is to make visualizations in Tableau or apply machine learning methods to answer the following questions about tornadoes: 
      - Which tornado magnitude is the most common?
 
      - Which state has the most tornadoes?
 
      - In which month do the most tornadoes occur? 
 
-     - Can I predict the EF rating of a tornado given the number of fatalities, injuries, crop loss ($), loss ($), length (miles), & width (yards)? 
-     
+     - Can I use machine learning algorithms predict the EF rating of a tornado given the number of fatalities, injuries, crop loss ($), loss ($), length (miles), & width (yards)? 
+
+## The Dataset
+     - I utilized the NOAA National Severe Weather Database Browser to download all tornado data from 1950-2020
+  ![NOAA](https://github.com/nsmeltz/Portfolio/blob/fbf381a3d80497a336325ddfbe00080dadcfff01/Tornadoes%20Machine%20Learning%20&%20Analysis/Images/NOAA_SPC.png)
+  
 ## Data Cleaning Process
 
 Tornado Data Dictionary

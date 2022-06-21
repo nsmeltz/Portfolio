@@ -1,10 +1,12 @@
 # 3D Plotting in Matlab
 
-## The Dataset
+## Summary
+This work is a part of the analysis I did for my thesis research in Yellowstone National Park. For this analysis I will walk through the step by step process that I used to determine what data I needed to filter out to produce a robust geophysical inverisons for each resistivity line shown in the image below.  
+
+## Background: What is Geophysics?
 Geophysics measures the physical properties of the Earth to determine where there is hard rock vs soft rock, water sataturated rock vs dry rock, and even magnetic rocks! In this analysis I used a type of geophysics called Electrical Resistivity. You can think the resistivity measurement like an xray for the Earth that can find where water is underground because water conducts electricity very well. Hot water that is rich in dissolved salts, like the water in Yellowstone, is particularly good at conducting electricity so it is easy to spot in resisvity datasets because it will show up as very low resistivity (ie high conductivity).
 
-This work is a part of the analysis I did for my thesis research in Yellowstone National Park. For this analysis I will walk through the step by step process that I used to determine what data I needed to filter out to produce a robust geophysical inverisons for each resistivity line shown in the image below.                       
- 
+## The Dataset
 ![location](https://github.com/nsmeltz/Portfolio/blob/e0854428d17b28c55d054287d20d37b9beadd2d0/3D%20Resistivity%20Data%20Analysis%20&%20Plotting/Images/GE_lines.jpg).
    - 5 resistivity datasets were collected in parallel lines crossing over Rosette Spring
    - Each line is ~110m long 
